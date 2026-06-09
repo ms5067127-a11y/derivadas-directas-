@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Derivadas Directas</title>
+
+<style>
+
+body{
+
+font-family:Arial;
+
+padding:20px;
+
+background:#e6f7ff;
+
+}
+
+.caja{
+
+background:white;
+
+padding:20px;
+
+border-radius:10px;
+
+max-width:500px;
+
+margin:auto;
+
+}
+
+input,button{
+
+width:100%;
+
+padding:12px;
+
+margin-top:10px;
+
+}
+
+button{
+
+background:#0077cc;
+
+color:white;
+
+border:none;
+
+}
+
+#resultado{
+
+margin-top:20px;
+
+font-size:20px;
+
+font-weight:bold;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="caja">
+
+<h1>Calculadora de Derivadas</h1>
+
+<input id="numero" placeholder="Escribe el exponente. Ejemplo: 3">
+
+<button onclick="calcular()">
+
+Resolver
+
+</button>
+
+<div id="resultado"></div>
+
+</div>
+
+<script>
+
+function calcular(){
+
+let n =
+
+parseInt(document.getElementById("numero").value);
+
+if(isNaN(n)){
+
+document.getElementById("resultado").innerHTML =
+
+"Escribe un número";
+
+return;
+
+}
+
+let coeficiente = n;
+
+let exponente = n - 1;
+
+document.getElementById("resultado").innerHTML =
+
+"La derivada de x^" + n +
+
+" es " +
+
+coeficiente +
+
+"x^" +
+
+exponente;
+
+}
+
+</script>
+
+</body>
+
+</html>
